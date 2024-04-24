@@ -14,3 +14,14 @@ Your GST is 2.75
 Your PST is 3.85
 Your total is 61.65
 """
+
+total_price = 0
+
+for i in range(1,6):
+    price_i = input("Enter the price of item #"+str(i)+":")
+    total_price +=float(price_i)
+
+print("subtotal price is ",round(total_price, 2))
+print("PST is ", round(total_price*0.07,2))
+print("GST is ",round(total_price*0.05,2))
+print("total price is ",round(total_price*1.12, 2))

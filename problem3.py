@@ -17,3 +17,16 @@ example:
 enter a number: 4
 the sum of the series is 1234
 """
+
+number = int(input("enter a number between 1 and 10: "))
+
+if number>10:
+    print("LESS THAN 10!!!!")
+    exit()
+
+total=0
+for i in range(1,number+1):
+    i_th_num = int("1"*i)
+    total+=i_th_num
+
+print("the sum of the series is "+str(total))

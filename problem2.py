@@ -37,3 +37,41 @@ example:
 Enter a number: -4
 Invalid input
 """
+
+
+from typing_extensions import TypeVarTuple
+
+
+num = float(input("enter an number: "))
+
+if float(int(num)) == num:
+    num = int(num)
+    if num>=0:
+
+        num_fac=1
+        for i in range(1,num+1):
+            num_fac*=i
+        print("factorial of "+str(num)+" equals "+str(num_fac))
+    else:
+        print("factorial of "+str(num)+" is infinity")
+else:
+    multiply_num=1
+    while True:
+
+        if num<1:
+            y = 0.976918236569 - 0.395618213536 * num + 0.428499421296 * num**2
+            y=y*multiply_num
+
+            print("factorial of "+str(round(num, 2))+" is ~"+str(round(y, 2)))
+            exit()
+        
+        multiply_num *= num
+        num -=1
+
+
+
+
+
+
+
+

@@ -23,3 +23,13 @@ Enter total payments for month(2)  : 75
 Your closing balance is $51.51
 
 """
+amount_months = 2
+
+current_balence=0
+for i in range(1,amount_months+1):
+    amount_bought = float(input("enter total purchaes this month (month "+str(i)+"): "))
+    amount_pays = float(input("enter total purchaes this month (month "+str(i)+"): "))
+    current_balence = current_balence + amount_bought - amount_pays
+    print('interest 2%; ' + str(current_balence * 0.02))
+    current_balence = current_balence + current_balence * 0.02
+    print("closing balence is: $", current_balence)

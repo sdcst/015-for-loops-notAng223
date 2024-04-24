@@ -22,3 +22,16 @@ enter a number:4
 ****
 
 """
+
+length_box = float(input("enter box length: "))
+
+if float(int(length_box))==length_box:
+    length_box = int(length_box)
+
+    for h in range(0, length_box):
+        print("")
+        for w in range(0, length_box):
+
+            print("* ", end="")
+else:
+    print("error; not a interger")
